@@ -1,5 +1,68 @@
 /* eslint no-unused-vars: "off" */
 
+const states =
+  {
+    'Alabama': 'AL',
+    'Alaska': 'AK',
+    'American Samoa': 'AS',
+    'Arizona': 'AZ',
+    'Arkansas': 'AR',
+    'California': 'CA',
+    'Colorado': 'CO',
+    'Connecticut': 'CT',
+    'Delaware': 'DE',
+    'District Of Columbia': 'DC',
+    'Federated States Of Micronesia': 'FM',
+    'Florida': 'FL',
+    'Georgia': 'GA',
+    'Guam': 'GU',
+    'Hawaii': 'HI',
+    'Idaho': 'ID',
+    'Illinois': 'IL',
+    'Indiana': 'IN',
+    'Iowa': 'IA',
+    'Kansas': 'KS',
+    'Kentucky': 'KY',
+    'Louisiana': 'LA',
+    'Maine': 'ME',
+    'Marshall Islands': 'MH',
+    'Maryland': 'MD',
+    'Massachusetts': 'MA',
+    'Michigan': 'MI',
+    'Minnesota': 'MN',
+    'Mississippi': 'MS',
+    'Missouri': 'MO',
+    'Montana': 'MT',
+    'Nebraska': 'NE',
+    'Nevada': 'NV',
+    'New Hampshire': 'NH',
+    'New Jersey': 'NJ',
+    'New Mexico': 'NM',
+    'New York': 'NY',
+    'North Carolina': 'NC',
+    'North Dakota': 'ND',
+    'Northern Mariana Islands': 'MP',
+    'Ohio': 'OH',
+    'Oklahoma': 'OK',
+    'Oregon': 'OR',
+    'Palau': 'PW',
+    'Pennsylvania': 'PA',
+    'Puerto Rico': 'PR',
+    'Rhode Island': 'RI',
+    'South Carolina': 'SC',
+    'South Dakota': 'SD',
+    'Tennessee': 'TN',
+    'Texas': 'TX',
+    'Utah': 'UT',
+    'Vermont': 'VT',
+    'Virgin Islands': 'VI',
+    'Virginia': 'VA',
+    'Washington': 'WA',
+    'West Virginia': 'WV',
+    'Wisconsin': 'WI',
+    'Wyoming': 'WY'
+  }
+
 const customers = [
   {
     'gender': 'male',
@@ -11,7 +74,7 @@ const customers = [
     'location': {
       'street': '8073 rolling green rd',
       'city': 'south valley',
-      'state': 'msouri',
+      'state': 'missouri',
       'postcode': 99356
     },
     'email': 'curtis.ryan@example.com',
@@ -77,8 +140,8 @@ const customers = [
     'gender': 'female',
     'name': {
       'title': 'ms',
-      'first': 'christine',
-      'last': 'cooper'
+      'first': 'keyboard',
+      'last': 'cat'
     },
     'location': {
       'street': '7725 fincher rd',
@@ -86,7 +149,7 @@ const customers = [
       'state': 'west virginia',
       'postcode': 34757
     },
-    'email': 'christine.cooper@example.com',
+    'email': 'keyboard.cat@example.com',
     'login': {
       'username': 'bluebutterfly345',
       'password': 'ninjas',
@@ -104,7 +167,7 @@ const customers = [
       'value': '446-75-6574'
     },
     'picture': {
-      'large': 'https://randomuser.me/api/portraits/women/52.jpg',
+      'large': 'https://78.media.tumblr.com/avatar_367d42588d28_128.pnj',
       'medium': 'https://randomuser.me/api/portraits/med/women/52.jpg',
       'thumbnail': 'https://randomuser.me/api/portraits/thumb/women/52.jpg'
     },

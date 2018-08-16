@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+}
+h2{
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: 700;
+}
+
+#output {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    flex-flow: row-wrap;
+    justify-content: center;
+    align-content: stretch;
+    font-family: Roboto, sans-serif;
+}
+
+.customer {
+    width: 250px;
+    line-height: .8rem;
+    text-align: center;
+    padding-bottom: 28px;
+
+}
+
+p {
+    font-size: 12px;
+}
+
+h2 + p {
+    color: #7F7F7F;
+    font-size: 11px;
+}
+
+img {
+    /* border-radius: 50%; */
+    border-radius: 100px;
+    border-bottom-right-radius: 60px;
+    border-top-left-radius: 60px;
+}

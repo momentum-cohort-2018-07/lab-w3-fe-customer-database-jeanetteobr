@@ -1,42 +1,25 @@
 console.log('Write your code here!')
 console.log('customers and moment are available to you.')
 
-// class Customer {
-//     constructor (name, email, location, dob, registered) {
-//         this.name = name; 
-//         this.email = email;
-//         this.location = location;
-//         this.dob = dob;
-//         this.registered = registered;
-//     }
-//     getName(){
-//         return name[1][2]
-//     }
-//     getLocation() {
-//         return location
-//     }
-//     getBirthdate() {
-//         return moment(this.customerInfo.dob).format('MMM D, YYYY')
-//     }
-//     getRegDate() {
-//         return moment(registered).format('MMM D, YYYY')
-//     }
-// }
-
-// function createNewDiv(){
-//     let newDiv = document.createElement('div')
-// 	let containerDiv = document.getElementById('customers')
-//     containerDiv.appendChild(newDiv).classList.add('customer-div')
-    
-// } 
-
-// function newCustomer() {
-    
-// }
-
 function titleCase (word) {
     return word[0].toUpperCase() + word.slice(1)
   }
+
+  function capsEachWord (str) {
+    str = str.toLowerCase().split(' ');
+    for (var i = 0; i < str.length; i++) {
+        str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1);
+    }
+    return str.join(' ');
+};
+
+  function capsEachWord (str) {
+    str = str.toLowerCase().split(' ');
+    for (var i = 0; i < str.length; i++) {
+        str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1);
+    }
+    return str.join(' ');
+};
   
   class Customer {
     constructor (customerInfo) {
@@ -44,9 +27,9 @@ function titleCase (word) {
     }
   
     getName () {
-      return titleCase(this.info.name.first) +
+      return capsEachWord(this.info.name.first) +
         ' ' +
-        titleCase(this.info.name.last)
+        capsEachWord(this.info.name.last)
     }
 
     getEmailAddress () {
@@ -56,6 +39,15 @@ function titleCase (word) {
     getDates(){
         return 'DOB: ' + moment(this.info.dob).format('MMM D, YYYY') + '\n' + 
         'Customer since: ' + moment(this.info.registered).format('MMM D, YYYY')
+    }
+
+    getLocation() {
+        return capsEachWord(this.info.location.street) + '\n' + capsEachWord(this.info.location.city) + ', ' + capsEachWord(this.info.location.state) + ' ' 
+        + (this.info.location.postcode)
+    }
+
+    getState() {
+       
     }
   
     generateDOM () {
@@ -74,12 +66,18 @@ function titleCase (word) {
       let dates = document.createElement('p')
       dates.innerText = this.getDates()
 
-      
+      let address = document.createElement('p')
+      address.innerText = this.getLocation()
 
-      div.appendChild(nameH2)
+      let test = document.createElement('p')
+      test.innerText = this.getState()
+
       div.appendChild(headshot)
+      div.appendChild(nameH2)
       div.appendChild(email)
+      div.appendChild(address)
       div.appendChild(dates)
+      div.appendChild(test)
   
       return div
     }
@@ -90,4 +88,14 @@ function titleCase (word) {
     let customer = new Customer(customerInfo)
     outputDiv.appendChild(customer.generateDOM())
   }
-  
+
+// function abbr(state) { 
+//     let stateName = Object.keys(states);
+//     let stateAbbr = Object.values(states);
+
+//     if(this.info.location.state === stateName ) {
+//         return stateAbbr
+//     }
+// }
+
+
