@@ -77,7 +77,6 @@ function titleCase (word) {
       div.appendChild(email)
       div.appendChild(address)
       div.appendChild(dates)
-      div.appendChild(test)
   
       return div
     }
