@@ -7,11 +7,12 @@ h2{
 }
 
 #output {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     flex-flow: row-wrap;
-    justify-content: center;
+    /* justify-content: center; */
     align-content: stretch;
     font-family: Roboto, sans-serif;
 }
